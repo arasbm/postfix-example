@@ -9,7 +9,7 @@ public class PostFixEvaluator
   private final static char DIVIDE = '/';
   private Stack<Integer> stack;
   
-  public PostfixEvaluator()
+  public PostFixEvaluator()
   {
     stack = new Stack<Integer>();
   }
@@ -36,4 +36,9 @@ public class PostFixEvaluator
     return result;*/
     return 0;
   } 
+  
+  public boolean isOperator(String str)
+  {
+     return (str.equals("+") || str.equals("-") || str.equals("*") || str.equals("/"));
+  }
 }
